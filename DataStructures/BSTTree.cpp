@@ -6,23 +6,12 @@ BSTTree::BSTTree(int size)
 {
 	srand(time(nullptr));
 
-	cr = cl = cp = "  ";
-	cr[0] = 218; cr[1] = 196;
-	cl[0] = 192; cl[1] = 196;
-	cp[0] = 179;
-
 	Size = 0;
-
 	for(int i = 0 ; i < size ; i++) Add(rand());
 }
 
 BSTTree::BSTTree()
-{
-	cr = cl = cp = "  ";
-	cr[0] = 218; cr[1] = 196;
-	cl[0] = 192; cl[1] = 196;
-	cp[0] = 179;
-	
+{	
 	Root = nullptr;
 	Size = 0;
 }
@@ -169,6 +158,13 @@ Node * BSTTree::SerachNext(Node* node)
 //Wyswietlanie
 void BSTTree::Show(string sp, string sn, Node* i)
 {
+	string cr, cl, cp;
+
+	cr = cl = cp = "  ";
+	cr[0] = 218; cr[1] = 196;
+	cl[0] = 192; cl[1] = 196;
+	cp[0] = 179;
+	
 	if (Size == 0) cout << "Drzewo puste" << endl;
 	else
 	{

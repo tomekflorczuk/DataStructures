@@ -7,7 +7,6 @@ class Heap
 {
 	int* Array;
 	int Size;
-	string cr, cl, cp;
 public:
 	Heap(int size);
 	Heap();

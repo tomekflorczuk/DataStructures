@@ -6,13 +6,7 @@ Heap::Heap(int size)
 {
 	srand(time(nullptr));
 	
-	cr = cl = cp = "  ";
-	cr[0] = 218; cr[1] = 196;
-	cl[0] = 192; cl[1] = 196;
-	cp[0] = 179;
-	
-	Size = 0;
-	
+	Size = 0;	
 	Array = new int[size];
 	for (int i = 0; i < size; i++)
 	{
@@ -23,12 +17,7 @@ Heap::Heap(int size)
 }
 
 Heap::Heap()
-{
-	cr = cl = cp = "  ";
-	cr[0] = 218; cr[1] = 196;
-	cl[0] = 192; cl[1] = 196;
-	cp[0] = 179;
-	
+{	
 	Size = 0;
 	Array = nullptr;
 }
@@ -153,7 +142,13 @@ int Heap::Search(int data)
 //Wyswietlanie
 void Heap::Show(string sp, string sn, int i)
 {
-
+	string cr, cl, cp;
+	
+	cr = cl = cp = "  ";
+	cr[0] = 218; cr[1] = 196;
+	cl[0] = 192; cl[1] = 196;
+	cp[0] = 179;
+		
 	if (Size == 0) cout << "Kopiec pusty" << endl;
 	else
 	{

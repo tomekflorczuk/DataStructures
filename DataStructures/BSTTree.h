@@ -8,7 +8,6 @@ class BSTTree
 {
 	int Size;
 	Node* Root;
-	string cr, cl, cp;
 public:
 	BSTTree(int size);
 	BSTTree();
